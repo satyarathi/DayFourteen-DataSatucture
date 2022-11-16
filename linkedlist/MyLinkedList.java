@@ -25,6 +25,16 @@ public class MyLinkedList<T> {
 		}
 	}
 	
+	public void append(T key) {
+		Node<T> node = new Node<> (key);
+		if (head == null) {
+			head = node;
+			tail = node;
+		}else {
+			tail.next = node;
+			tail = node;
+		}
+	}
 }	
 	
 	
