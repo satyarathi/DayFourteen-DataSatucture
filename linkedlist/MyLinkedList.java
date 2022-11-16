@@ -42,6 +42,23 @@ public class MyLinkedList<T> {
 		node.next = tail;
 	}
 	
+	T pop() {
+		T deleteElement = head.key;
+		head = head.next;
+		return deleteElement;
+	}
+	
+	T poplast() {
+		T deleteElement = tail.key;
+		Node<T> temp = head;
+		while (temp.next != tail) {
+			temp = temp.next;
+		}
+		temp.next = null;
+		temp = tail;
+		return deleteElement;
+	}
+	
 }	
 	
 	
