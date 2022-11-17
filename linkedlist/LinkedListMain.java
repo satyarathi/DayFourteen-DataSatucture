@@ -24,5 +24,7 @@ public class LinkedListMain<T> {
 		list.display();
 		System.out.println();
 		
+		list.popElement(40);
+		list.display();
 	}
 }
