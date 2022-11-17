@@ -70,11 +70,11 @@ public class MyLinkedList<T> {
 	}
 
 	public boolean insertAfter(T searchData, T insertData) {
-		Node<T> insertnode = new Node<> (insertData);
-		Node<T> searchedNode = new Node<> (searchData);
+		Node<T> node = new Node<> (insertData);
+		Node<T> searchedNode = search (searchData);
 		if(searchData != null) {
-			insertnode.next = searchedNode.next;
-			searchedNode.next = insertnode;
+			node.next = searchedNode.next;
+			searchedNode.next = node;
 			return true;
 		}
 		return false;

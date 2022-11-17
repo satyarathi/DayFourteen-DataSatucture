@@ -22,6 +22,7 @@ public class LinkedListMain<T> {
 		
 		System.out.println(list.insertAfter(30, 40));
 		list.display();
+		System.out.println();
 		
 	}
 }
