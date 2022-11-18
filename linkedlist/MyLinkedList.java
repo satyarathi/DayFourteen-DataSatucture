@@ -6,7 +6,7 @@ public class MyLinkedList<T> {
 	Node<T> tail;
 
 
-	public void display() {
+	void display() {
 		Node<T> temp = head;
 		while (temp != null) {
 			System.out.print(temp.key+ " ");
@@ -47,6 +47,10 @@ public class MyLinkedList<T> {
 		head = head.next;
 		return deleteElement;
 	}
+	
+	public T peek(){
+        return head.key;
+    }
 
 	T poplast() {
 		T deleteElement = tail.key;

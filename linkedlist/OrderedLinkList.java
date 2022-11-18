@@ -3,14 +3,13 @@ package com.linkedlist;
 public class OrderedLinkList<T extends Comparable<T>> {
 
 	Node<T> head;
-	Node<T> tail;
-
-
+	 Node<T> tail;
+	
 	public void display() {
-		Node<T> temp = head;
-		while (temp != null) {
-			System.out.print(temp.key+ " ");
-			temp = temp.next;
+		Node<T> tempCurrent = head;
+		while (tempCurrent != null) {
+			System.out.print(tempCurrent.key+ " ");
+			tempCurrent = tempCurrent.next;
 		}
 	}
 
@@ -24,7 +23,7 @@ public class OrderedLinkList<T extends Comparable<T>> {
 			node.next =head;
 			head = node;
 		}
-		else if(tail.key.compareTo(key)>0) {
+		else if(tail.key.compareTo(key)<0) {
 			tail.next = node;
 			tail = node;
 		}
@@ -42,4 +41,5 @@ public class OrderedLinkList<T extends Comparable<T>> {
 			
 		}
 	}	
+	
 }
